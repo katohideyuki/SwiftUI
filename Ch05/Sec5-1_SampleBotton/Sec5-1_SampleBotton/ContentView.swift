@@ -137,3 +137,39 @@ struct ContentView3_Previews: PreviewProvider {
         ContentView3()
     }
 }
+
+/**
+ -----------------------------------------------------------------
+ 配列の乱数で「じゃんけんゲーム」を作る
+ -----------------------------------------------------------------
+ */
+struct ContentView4: View {
+    let janken = ["グー", "チョキ", "パー"]
+    @State var te = ""
+
+    var body: some View {
+        VStack {
+            // ボタンを作る
+            Button("じゃんけん") {
+                // teプロパティはOptional型ではないので、「!」で強制アンラップする
+                te = janken.randomElement()!
+            }
+            .foregroundColor(.white)
+            .background(
+                Capsule()
+                    .foregroundColor(.blue)
+                    .frame(width: 120, height: 40)
+            )
+            // 結果の表示
+            Text(te)
+                .font(.largeTitle)
+                .padding()
+        }
+    }
+}
+
+struct ContentView4_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView4()
+    }
+}
