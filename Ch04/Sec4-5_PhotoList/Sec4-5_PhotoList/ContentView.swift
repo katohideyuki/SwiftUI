@@ -8,9 +8,11 @@
 
 import SwiftUI
 /**
+ -----------------------------------------------------------------
  リスト表示から詳細ページを開く
- - NavigationViewのブロックの中にNavigationLinkを定義するとリンクになり、
-   リンクをタップするとdestinationで指定したビューが開く。
+ NavigationViewのブロックの中にNavigationLinkを定義するとリンクになり、リンクをタッ
+ プするとdestinationで指定したビューが開く。
+ -----------------------------------------------------------------
  */
 struct ContentView: View {
     var body: some View {
@@ -57,10 +59,12 @@ struct ContentView: View {
 }
 
 /**
- 複数のプレビューを表示する。
- プレビュー表示を行うためのContentView_PreviewsにはContentViewをプレビュー表示するために
- ContentView()を定義していたが、detailView()も追加することで、ContentViewとdetailViewの2つの
- プレビューを表示できる。
+ -----------------------------------------------------------------
+ 複数のプレビューを表示
+ プレビュー表示を行うためのContentView_PreviewsにはContentViewをプレビュー表示す
+ るためにContentView()を定義していたが、detailView()も追加することで、ContentViewと
+ detailViewの2つのプレビューを表示できる。
+ -----------------------------------------------------------------
  */
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -79,13 +83,17 @@ struct SubView: View {
 }
 
 /**
- サブビューを`@ViewBuilder`で修飾した関数で作る。
- これまでの例ではNavigationLinkの遷移先のビューをContentViewと同じようにstructで
- 定義する構造体で作っていたが、`@ViewBuilder`を付与したユーザ定義関数で作る
- こともできる。
+ -----------------------------------------------------------------
+ サブビューを`@ViewBuilder`で修飾した関数で作る
+ これまでの例ではNavigationLinkの遷移先のビューをContentViewと同じようにstructで定義
+ する構造体で作っていたが、`@ViewBuilder`を付与したユーザ定義関数で作ることもで
+ きる。
 
  関数
- - func 関数名() -> 戻り値の型
+ ```Swift 関数の書式
+ func 関数名() -> 戻り値の型
+ ```
+ -----------------------------------------------------------------
  */
 @ViewBuilder
 func detailView() -> some View {
@@ -98,4 +106,34 @@ func detailView() -> some View {
         Text("横須賀 鷹取山の磨崖仏")
     }
     .padding()
+}
+
+/**
+ -----------------------------------------------------------------
+ プロトコルが指定してある構造体
+ プロトコルとは
+ 規格のようなもので、クラスや構造体が保持するプロパティやメソッドなどの決まり事を
+ 定めるモノ。プロトコルが指定してあることで、クラスや構造体の機能や属性を知る事が
+ できたり、コードの不備をXcodeが指摘してくれる。
+
+ ```Swift プロトコルが指定してある構造体の書式
+ struct 構造体名 : プロトコル {
+ }
+ ```
+ -----------------------------------------------------------------
+ */
+// Viewプロトコルを指定
+struct ContentView2: View {
+    // Viewプロトコルに従ってbodyが必須
+    var body: some View {
+        Text("Viewプロトコルを指定")
+    }
+}
+
+// PreviewProviderプロトコルを指定 ※ContentView2用のプレビュー
+struct ContentView2_Previews: PreviewProvider {
+    // PreviewProviderプロトコルに従ってpreviewsが必須
+    static var previews: some View {
+        ContentView2()
+    }
 }
