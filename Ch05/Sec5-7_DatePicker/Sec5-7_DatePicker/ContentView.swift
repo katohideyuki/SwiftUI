@@ -166,7 +166,7 @@ struct ContentView4: View {
                 .font(.footnote)
         }
         .padding()
-        .border(.gray, width: 1)
+        .border(.gray, width: 1 )
     }
 }
 
