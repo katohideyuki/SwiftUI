@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7712A74F28D87BFF0001A016 /* Sec2_1_addTextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7712A74E28D87BFF0001A016 /* Sec2_1_addTextApp.swift */; };
-		7712A75128D87BFF0001A016 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7712A75028D87BFF0001A016 /* ContentView.swift */; };
 		7712A75328D87C0A0001A016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7712A75228D87C0A0001A016 /* Assets.xcassets */; };
 		7712A75628D87C0A0001A016 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7712A75528D87C0A0001A016 /* Preview Assets.xcassets */; };
+		77B187D72AB72E4D00BD0470 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7712A75028D87BFF0001A016 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +19,7 @@
 		7712A75028D87BFF0001A016 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7712A75228D87C0A0001A016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7712A75528D87C0A0001A016 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		772449612AB734FE00C08491 /* ReadOnlyVariable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReadOnlyVariable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 				7712A74E28D87BFF0001A016 /* Sec2_1_addTextApp.swift */,
 				7712A75028D87BFF0001A016 /* ContentView.swift */,
 				7712A75228D87C0A0001A016 /* Assets.xcassets */,
+				772449612AB734FE00C08491 /* ReadOnlyVariable.playground */,
 				7712A75428D87C0A0001A016 /* Preview Content */,
 			);
 			path = "Sec2-1_addText";
@@ -137,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7712A75128D87BFF0001A016 /* ContentView.swift in Sources */,
+				77B187D72AB72E4D00BD0470 /* ContentView.swift in Sources */,
 				7712A74F28D87BFF0001A016 /* Sec2_1_addTextApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

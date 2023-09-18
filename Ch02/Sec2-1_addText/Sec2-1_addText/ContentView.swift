@@ -3,26 +3,28 @@
 //  Sec2-1_addText
 //  
 //  Created in 2022/09/19
-//  
 //
 
 import SwiftUI
 
+/// VStack, HStack
 struct ContentView: View {
+
+    /// リードオンリー変数
     var body: some View {
-        // 水平スタック (部品を横に並べる)
+        // 垂直スタック（部品を縦に並べる）
+        VStack {
+            Text("Hello, world!")
+                .padding()      // 一行空けるための修飾
+            Text("Placeholder")
+            Text("Placeholder 2")
+        }
+
+        // 水平スタック（部品を横に並べる）
         HStack {
-            // 垂直スタック (部品を縦に並べるVStack)
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, world!")
-                    .padding()
-                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-                Text("Placeholder 2")
-            }
-            Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+            Text("Hello, wolrd!")
+                .padding()
+            Text("Placeholder 3")
         }
     }
 }
